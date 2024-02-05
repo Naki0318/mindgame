@@ -1,0 +1,128 @@
+body{
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #11110e;
+
+}
+.divi{
+  margin: 0% 15% 0%;
+}
+.name{
+  margin: 0% 37% 0%;
+}
+
+#husga{
+  align-items: center;
+  height: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.main_con{
+  margin: 0% 15% 0%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.game-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.board-tile{
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.board.flipped {
+  transform: rotateY(180deg);
+}
+.board.matched {
+  transform: rotateY(180deg);
+}
+
+.tile-front{
+
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  background-color: #3498db;
+  border-radius: 10px;
+  position: absolute;
+  backface-visibility: hidden;
+  cursor: pointer;
+
+}
+.tile-back {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: #3498db;
+  border-radius: 10px;
+  position: absolute;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.tile-back {
+  transform: rotateY(180deg);
+}
+
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 10%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1% 20% 1%;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
